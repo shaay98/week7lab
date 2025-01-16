@@ -7,9 +7,14 @@ let weather = [
     { day: "Wednesday", temperture: 57, rainfall: 0.25},
 ];
 
-let weatherArray = [{day, temperture, rainfall}]
+let tb = document.getElementById("weather")
+weather.forEach(weatherDay => {
+   let tr= `<tr>
+            <td>${weatherDay.day}</td>
+            <td>${weatherDay.temperture}</td>
+            <td>${weatherDay.rainfall}</td>
+          </tr>`
+        tb.innerHTML += tr;
+}); 
 
-array.forEach(weatherArray => {
-    
-});
 
