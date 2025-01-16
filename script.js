@@ -27,6 +27,6 @@ let tempTotal = tempTotal / days;
 document.getElementById("temp").addEventListener;
 
 let maxRain = weatherDay.reduce((day) => {
-  return day.rainfall > max.Rain;
+  return day.rainfall > rain;
 });
-document.getElementById("maxRain").addEventListener;
+document.getElementById("rain").addEventListener;
