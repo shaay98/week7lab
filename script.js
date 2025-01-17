@@ -18,15 +18,19 @@ weather.forEach((weatherDay) => {
 });
 
 let tempTotal = 0;
-let days = weatherDay.length;
+let days = weather.length;
 
-weatherDay.forEach((day) => {
-  tempTotal += day.temperature;
+weather.forEach((day) => {
+  tempTotal += day.temperture;
 });
-let tempTotal = tempTotal / days;
-document.getElementById("temp").addEventListener;
+tempTotal = tempTotal / days;
+document.getElementById("temp").addEventListener("click",()=>{
+  document.getElementById("averageTemp").innerText=tempTotal
+})
 
-let maxRain = weatherDay.reduce((day) => {
-  return day.rainfall > rain;
+let maxRain = weather.acc.reduce((day) => {
+  return day.rainfall=0 
 });
-document.getElementById("rain").addEventListener;
+document.getElementById("rain").addEventListener("click", ()=>{
+  document.getElementById("maxRain").innerHTML=maxRain
+})
