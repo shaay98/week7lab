@@ -24,13 +24,18 @@ weather.forEach((day) => {
   tempTotal += day.temperture;
 });
 tempTotal = tempTotal / days;
-document.getElementById("temp").addEventListener("click",()=>{
-  document.getElementById("averageTemp").innerText=tempTotal
-})
-
-let maxRain = weather.acc.reduce((day) => {
-  return day.rainfall=0 
+document.getElementById("temp").addEventListener("click", () => {
+  document.getElementById("averageTemp").innerText = tempTotal;
 });
-document.getElementById("rain").addEventListener("click", ()=>{
-  document.getElementById("maxRain").innerHTML=maxRain
-})
+
+let maxRain = weather.reduce((max, day) => {
+  if (day.rainfall > max) {
+    max = day.rainfall;
+  } else if (day.rainfall <= max) {
+  }
+  return max;
+}, 0);
+
+document.getElementById("rain").addEventListener("click", () => {
+  document.getElementById("maxRain").innerHTML = maxRain;
+});
